@@ -218,9 +218,7 @@ function apex_config() {
 	ALTER USER APEX_PUBLIC_USER ACCOUNT UNLOCK;
 	ALTER USER APEX_PUBLIC_USER IDENTIFIED BY oracle;
 	BEGIN
-            apex_instance_admin.set_parameter(
-                p_parameter => 'IMAGE_PREFIX',
-                p_value     => 'https://static.oracle.com/cdn/apex/22.2.0/' );      
+            apex_instance_admin.set_parameter(p_parameter => 'IMAGE_PREFIX', p_value => 'https://static.oracle.com/cdn/apex/22.2.0/');
             commit;
 	END;
 	exit
