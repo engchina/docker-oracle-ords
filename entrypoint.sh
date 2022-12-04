@@ -217,10 +217,6 @@ function apex_config() {
 	alter profile default limit password_life_time UNLIMITED;
 	ALTER USER APEX_PUBLIC_USER ACCOUNT UNLOCK;
 	ALTER USER APEX_PUBLIC_USER IDENTIFIED BY oracle;
-	BEGIN
-            apex_instance_admin.set_parameter(p_parameter => 'IMAGE_PREFIX', p_value => 'https://static.oracle.com/cdn/apex/22.2.0/');
-            commit;
-	END;
 	exit
 _SQL_SCRIPT
 	RESULT=$?
